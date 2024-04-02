@@ -5,14 +5,15 @@
              Shell.NavBarIsVisible="False">
 
  <Grid>
+  
+ 
  <Frame x:Name="Barras"
-  IsVisible="true"
-  Margin="10,10,10,400"
+  Margin="10,10,10,600"
   CornerRadius="20"
   BackgroundColor="Blue"
-  HorizontalOptions="Start"
-  VerticalOptions="Fill">
-
+  HorizontalOptions="Fill"
+  VerticalOptions="Start">
+<Grid>
      <Grid.RowDefinitions>
        <RowDefinition Height="60"/>
        <RowDefinition Height="60"/>
@@ -22,39 +23,42 @@
        <ColumnDefinition Width="30"/>
        <ColumnDefinition Width="*"/>
      </Grid.ColumnDefinitions>
-    
+</Grid>
  </Frame>
 
  <Frame x:Name="Botoes"
-  IsVisible="true"
   Margin="300,150,10,150"
   CornerRadius="20"
   BackgroundColor="Blue"
   HorizontalOptions="Fill"
   VerticalOptions="Fill">
-
+<Grid>
      <Grid.RowDefinitions>
-       <RowDefinition Height="60"/>
-       <RowDefinition Height="60"/>
-       <RowDefinition Height="60"/>
-       <RowDefinition Height="60"/>
+       <RowDefinition Height="*"/>
+       <RowDefinition Height="*"/>
+       <RowDefinition Height="*"/>
+       <RowDefinition Height="*"/>
      </Grid.RowDefinitions>
      <Grid.ColumnDefinitions>
        <ColumnDefinition Width="*"/>
      </Grid.ColumnDefinitions>
 
-     <ImageButton Source="fa-cutlery"
-     Grid.Row="0"/>
+     <ImageButton Source="seta.png"
+     Grid.Row="0"
+     Grid.Column="0"/>
 
-     <ImageButton Source="fa-smile-o"
-     Grid.Row="1"/>
+     <ImageButton Source="comida.jfif"
+     Grid.Row="1"
+     Grid.Column="0"/>
 
-     <ImageButton Source="fa-arrow-right"
-     Grid.Row="2"/>
+     <ImageButton Source="agua.jpg"
+     Grid.Row="2"
+     Grid.Column="0"/>
 
-     <ImageButton Source=" fa-tint"
-     Grid.Row="3"/>
-     
+     <ImageButton Source="sorriso.png"
+     Grid.Row="3"
+     Grid.Column="0"/>
+</Grid>
     
 
  </Frame>
