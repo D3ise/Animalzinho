@@ -14,6 +14,6 @@ public Personagens()
     tristeza = 0;
 }
 
-
+public void SetFome(double fome)
 
 }
