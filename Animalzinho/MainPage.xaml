@@ -4,102 +4,104 @@
              x:Class="Animalzinho.MainPage"
              Shell.NavBarIsVisible="False">
 
- <Grid>
+  <Grid>
+    
+    <Image x:Name="ImagemAnimalzinho"
+    Source="gatopreto.jpg"
+    Aspect="AspectFill"/>
   
-  <Image Source="gatopreto.jpg"
-  Aspect="AspectFill"/>
- 
- <Frame x:Name="Barras"
-  Margin="10,10,10,600"
-  CornerRadius="20"
-  Padding="0"
-  BorderColor="Black"
-  BackgroundColor="#a9ccde"
-  HorizontalOptions="Fill"
-  VerticalOptions="Start">
-<Grid>
-     <Grid.RowDefinitions>
-       <RowDefinition Height="*"/>
-       <RowDefinition Height="*"/>
-       <RowDefinition Height="*"/>
-     </Grid.RowDefinitions>
-     <Grid.ColumnDefinitions>
-       <ColumnDefinition Width="40"/>
-       <ColumnDefinition Width="*"/>
-     </Grid.ColumnDefinitions>
+  <Frame x:Name="Barras"
+    Margin="10,10,10,600"
+    CornerRadius="20"
+    Padding="0"
+    BorderColor="Black"
+    BackgroundColor="#a9ccde"
+    HorizontalOptions="Fill"
+    VerticalOptions="Start">
+  <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="40"/>
+        <ColumnDefinition Width="*"/>
+      </Grid.ColumnDefinitions>
 
-     <Image Source= "hum.png"
+      <Image Source= "hum.png"
+        Grid.Row="0"
+        Grid.Column="0"/>
+
+      <Image Source= "copo.png"
+        Grid.Row="1"
+        Grid.Column="0"/>
+
+      <Image Source= "rosto.png"
+        Grid.Row="2"
+        Grid.Column="0"/>
+
+      <ProgressBar x:Name="ProgressbarHum"
+      ProgressColor="Blue"
+      Progress="0"
+      Grid.Row= "0"
+      Grid.Column= "1"/>
+
+      <ProgressBar x:Name="ProgressbarCopo"
+      ProgressColor="Blue"
+      Progress="0"
+      Grid.Row= "1"
+      Grid.Column= "1"/>
+
+      <ProgressBar x:Name="ProgressbarRosto"
+      ProgressColor="Blue"
+      Progress="0"
+      Grid.Row= "2"
+      Grid.Column= "1"/>
+
+  </Grid>
+  </Frame>
+
+  <Frame x:Name="Botoes"
+    Margin="300,150,10,200"
+    CornerRadius="20"
+    Padding="0"
+    BorderColor="Black"
+    BackgroundColor="#a9ccde"
+    HorizontalOptions="Fill"
+    VerticalOptions="Fill">
+  <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"/>
+      </Grid.ColumnDefinitions>
+
+      <ImageButton Source="flexa.png"
+      Clicked="MudarPersonagem"
       Grid.Row="0"
       Grid.Column="0"/>
 
-     <Image Source= "copo.png"
+      <ImageButton Source="hum.png"
       Grid.Row="1"
       Grid.Column="0"/>
 
-     <Image Source= "rosto.png"
+      <ImageButton Source="copo.png"
       Grid.Row="2"
       Grid.Column="0"/>
 
-     <ProgressBar x:Name="ProgressbarHum"
-     ProgressColor="Blue"
-     Progress="0"
-     Grid.Row= "0"
-     Grid.Column= "1"/>
+      <ImageButton Source="rosto.png"
+      Grid.Row="3"
+      Grid.Column="0"/>
+  </Grid>
+      
 
-     <ProgressBar x:Name="ProgressbarCopo"
-     ProgressColor="Blue"
-     Progress="0"
-     Grid.Row= "1"
-     Grid.Column= "1"/>
-
-     <ProgressBar x:Name="ProgressbarRosto"
-     ProgressColor="Blue"
-     Progress="0"
-     Grid.Row= "2"
-     Grid.Column= "1"/>
-
-</Grid>
- </Frame>
-
- <Frame x:Name="Botoes"
-  Margin="300,150,10,200"
-  CornerRadius="20"
-  Padding="0"
-  BorderColor="Black"
-  BackgroundColor="#a9ccde"
-  HorizontalOptions="Fill"
-  VerticalOptions="Fill">
-<Grid>
-     <Grid.RowDefinitions>
-       <RowDefinition Height="*"/>
-       <RowDefinition Height="*"/>
-       <RowDefinition Height="*"/>
-       <RowDefinition Height="*"/>
-     </Grid.RowDefinitions>
-     <Grid.ColumnDefinitions>
-       <ColumnDefinition Width="*"/>
-     </Grid.ColumnDefinitions>
-
-     <ImageButton Source="flexa.png"
-     Grid.Row="0"
-     Grid.Column="0"/>
-
-     <ImageButton Source="hum.png"
-     Grid.Row="1"
-     Grid.Column="0"/>
-
-     <ImageButton Source="copo.png"
-     Grid.Row="2"
-     Grid.Column="0"/>
-
-     <ImageButton Source="rosto.png"
-     Grid.Row="3"
-     Grid.Column="0"/>
-</Grid>
-    
-
- </Frame>
- </Grid>
+  </Frame>
+  </Grid>
 
 
-</ContentPage>
+  </ContentPage>
