@@ -4,41 +4,65 @@ public partial class MainPage : ContentPage
 {
 	Personagens atual;
 
-	GatoPreto Pretinho = new GatoPreto();
-	GatoBranco Nuvenzinha = new GatoBranco();
-	GatoLaranja Laranjinha = new GatoLaranja();
+	
+	GatoPreto pretinho;
+	GatoLaranja laranjinha;
+	GatoBranco nuvenzinha;
 
 	public MainPage()
 	{
 		InitializeComponent ();
 
-    	atual = Pretinho;
-		ImagemAnimalzinho.Source = atual.GetNomeDaImagem();
+        pretinho = new GatoPreto();
+		laranjinha = new GatoLaranja();
+		nuvenzinha = new GatoBranco();
+    	atual = pretinho;
+
+		var Pretinho = new Personagens();
+		Pretinho.SetFome(0.1);
+		ProgressbarHum.Progress = Pretinho.GetFome();
 	}
 
     void MudarPersonagem (object SENDER, EventArgs args)
 	 {
-		if (atual == Pretinho)
+		if (atual == pretinho)
 		{
-			atual = Nuvenzinha;
+			atual = nuvenzinha;
 		}
-		else if (atual == Nuvenzinha)
+		else if (atual == nuvenzinha)
 		{
-			atual = Laranjinha;
+			atual = laranjinha;
 		}
 		else 
 		{
-			atual= Pretinho;
+			atual= pretinho;
 		}
 
-        ProgressbarHum.Progress = atual.SetFome();
-		ProgressbarCopo.Progress = atual.GetSede();
-    	ImagemAnimalzinho.Source = atual.GetNomeDaImagem();
+		ImagemAnimalzinho.Source = atual.GetNomeDaImagem();
+		AtualizaPersonagem();
+       
 	 }
 	  void AumentarFome (object SENDER, EventArgs args)
 	  {
-		var animalzinho =GatoPreto.GetFome();
-		GatoPreto.SetFome(animalzinho + 0.1);
+		atual.SetFome(atual.GetFome() + 0.1);
+		AtualizaPersonagem();
+	  }
+	  void AumentarSede (object SENDER, EventArgs args)
+	  {
+		atual.SetSede(atual.GetSede() + 0.1);
+		AtualizaPersonagem();
+	  }
+	  void AumentarFelicidade (object SENDER, EventArgs args)
+	  {
+		atual.SetTristeza(atual.GetTristeza() + 0.1);
+		AtualizaPersonagem();
+	  }
+	  void AtualizaPersonagem()
+	  { 
+		ProgressbarHum.Progress = atual.GetFome();
+		ProgressbarCopo.Progress = atual.GetSede();
+		ProgressbarRosto.Progress = atual.GetTristeza();
+    	ImagemAnimalzinho.Source = atual.GetNomeDaImagem();
 	  }
 }
 

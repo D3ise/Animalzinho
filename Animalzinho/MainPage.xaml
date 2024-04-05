@@ -87,14 +87,17 @@
       Grid.Column="0"/>
 
       <ImageButton Source="hum.png"
+      Clicked="AumentarFome"
       Grid.Row="1"
       Grid.Column="0"/>
 
       <ImageButton Source="copo.png"
+      Clicked="AumentarSede"
       Grid.Row="2"
       Grid.Column="0"/>
 
       <ImageButton Source="rosto.png"
+      Clicked="AumentarFelicidade"
       Grid.Row="3"
       Grid.Column="0"/>
   </Grid>

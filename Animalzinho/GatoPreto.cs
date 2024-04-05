@@ -4,8 +4,9 @@ public class GatoPreto : Personagens
 {
 	public GatoPreto()
 	{
-		fome = 1;
-		sede = 0.5;
+		fome = 0;
+		sede = 0;
+		tristeza = 0;
 		ImagemAnimalzinho = "gatopreto.jpg";
 	}
 }

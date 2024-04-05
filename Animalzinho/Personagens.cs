@@ -18,9 +18,25 @@ public class Personagens
     {
         fome = f;
     }
+     public double GetFome()
+    {
+        return fome;
+    }
+    public void SetSede(double s)
+    {
+        sede = s;
+    }
     public double GetSede()
     {
         return sede;
+    }
+    public void SetTristeza(double t)
+    {
+        tristeza = t;
+    }
+    public double GetTristeza()
+    {
+        return tristeza;
     }
     
 

@@ -2,12 +2,12 @@ namespace Animalzinho;
 
 public class GatoBranco : Personagens
 {
-
-	public GatoBranco()
+    public GatoBranco()
 	{
-		fome = 0.5;
-		sede = 0.1;
-       ImagemAnimalzinho = "gatobranco.jpg";
+		fome = 0;
+		sede = 0;
+		tristeza = 0;
+        ImagemAnimalzinho = "gatobranco.jpg";
 	}
     
 }
