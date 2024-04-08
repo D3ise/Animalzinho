@@ -4,10 +4,11 @@ public class GatoBranco : Personagens
 {
     public GatoBranco()
 	{
-		fome = 0;
-		sede = 0;
-		tristeza = 0;
-        ImagemAnimalzinho = "gatobranco.jpg";
+		fome = 0.4;
+		sede = 0.4;
+		tristeza = 0.6;
+        ImagemAnimalzinhoVivo = "gatobranco.jpg";
+		ImagemAnimalzinhoMorto = "gatobranco_morto.jpg";
 	}
     
 }

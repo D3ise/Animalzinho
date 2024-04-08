@@ -5,7 +5,10 @@ public class Personagens
     protected double fome;
     protected double sede;
     protected double tristeza;
-    protected string  ImagemAnimalzinho;
+    protected string ImagemAnimalzinhoVivo;
+
+    protected string ImagemAnimalzinhoMorto;
+    protected bool SeEstiverMorto;
      
     public Personagens()
     {
@@ -17,6 +20,11 @@ public class Personagens
     public void SetFome(double f)
     {
         fome = f;
+        if (fome <= 0)
+        {
+            fome = 0;
+            SeEstiverMorto = true;
+        }
     }
      public double GetFome()
     {
@@ -25,6 +33,11 @@ public class Personagens
     public void SetSede(double s)
     {
         sede = s;
+        if (sede <= 0)
+        {
+            sede = 0;
+            SeEstiverMorto = true;
+        }
     }
     public double GetSede()
     {
@@ -33,6 +46,11 @@ public class Personagens
     public void SetTristeza(double t)
     {
         tristeza = t;
+        if (tristeza <= 0)
+        {
+            tristeza = 0;
+            SeEstiverMorto = true;
+        }
     }
     public double GetTristeza()
     {
@@ -42,6 +60,14 @@ public class Personagens
 
     public string GetNomeDaImagem()
     {
-        return ImagemAnimalzinho;
+        if (SeEstiverMorto)
+            return ImagemAnimalzinhoMorto;
+        else
+            return ImagemAnimalzinhoVivo;
+    }
+
+    public bool GetSeEstiverMorto()
+    {
+        return SeEstiverMorto;
     }
 }

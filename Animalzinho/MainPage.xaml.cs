@@ -13,14 +13,21 @@ public partial class MainPage : ContentPage
 	{
 		InitializeComponent ();
 
+		var timer =
+		Application.Current.Dispatcher.CreateTimer();
+		timer.Interval =
+		TimeSpan.FromSeconds(1);
+		timer.Tick += (s,e) =>
+		PassouTempo();
+		timer.Start();
+
         pretinho = new GatoPreto();
 		laranjinha = new GatoLaranja();
 		nuvenzinha = new GatoBranco();
     	atual = pretinho;
+		AtualizaPersonagem();
 
-		var Pretinho = new Personagens();
-		Pretinho.SetFome(0.1);
-		ProgressbarHum.Progress = Pretinho.GetFome();
+		
 	}
 
     void MudarPersonagem (object SENDER, EventArgs args)
@@ -63,6 +70,18 @@ public partial class MainPage : ContentPage
 		ProgressbarCopo.Progress = atual.GetSede();
 		ProgressbarRosto.Progress = atual.GetTristeza();
     	ImagemAnimalzinho.Source = atual.GetNomeDaImagem();
+	  }
+	  void PassouTempo()
+	  {
+		var estavaMorto = atual.GetSeEstiverMorto();
+		atual.SetFome(atual.GetFome() - 0.1);
+		atual.SetSede(atual.GetSede() - 0.1);
+		atual.SetTristeza(atual.GetTristeza() - 0.1);
+		AtualizaPersonagem();
+		if (estavaMorto != atual.GetSeEstiverMorto())
+		{
+			ImagemAnimalzinho.Source = atual.GetNomeDaImagem();
+		}
 	  }
 }
 
