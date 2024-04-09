@@ -8,6 +8,6 @@ public class GatoPreto : Personagens
 		sede = 0.1;
 		tristeza = 0.6;
 		ImagemAnimalzinhoVivo = "gatopreto.jpg";
-		ImagemAnimalzinhoMorto = "gatopreto_morto.jpg";
+		ImagemAnimalzinhoMorto = "gameover.png";
 	}
 }

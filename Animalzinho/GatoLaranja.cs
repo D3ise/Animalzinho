@@ -8,7 +8,7 @@ public class GatoLaranja : Personagens
 		sede = 0.9;
 		tristeza = 0.3;
 		ImagemAnimalzinhoVivo = "gatolaranja.jpg";
-		ImagemAnimalzinhoMorto = "gatolaranja_morto.jpg";
+		ImagemAnimalzinhoMorto = "gameover.png";
 	}
     
 }
